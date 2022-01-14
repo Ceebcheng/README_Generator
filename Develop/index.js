@@ -6,13 +6,24 @@ inquirer.prompt([
 
     {
         type: "input",
-        message: "What is your GitHub Title?",
+        message: "What is your Project Title?",
         name: "title"
     },
     {
         type: "input",
-        message: "Add a description of your Github",
+        message: "Provide a short description explaining your project.",
         name: "description"
+    },
+    {
+        type: "input",
+        message: "What are the steps required to install your project?",
+        name: "requiredsteps"
+    },
+    {
+        type: "list",
+        message: "What license did you get for this application?",
+        name: "license",
+        choices: ["Mit", "GNU AGPLv3", "Apache License 2.0", "Mozilla Public License 2.0","The Unlicense"]
     },
 ])
 
@@ -36,8 +47,45 @@ inquirer.prompt([
 // TODO: Create a function to initialize app
 function generatereadMe(input) {
     return `# ${input.title}
+
 ## Description
-${input.description}`
+
+${input.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+#Installation
+
+Required steps to install for your project are ${input.requiredsteps}
+
+#Usage
+
+To run this app, go to the terminal type ${input.useage}
+
+#Licsense
+
+${input.license}
+
+#Contributing
+
+
+
+#Tests
+
+
+
+#Questions
+
+
+
+`
 }
 
 // Function call to initialize app
