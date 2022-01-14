@@ -1,8 +1,8 @@
-# test
+# Readme Generator
     
 ## Description
 
-test
+To help the user create a simple and fun readme for their github
 
 ## Table of Contents
 
@@ -15,11 +15,11 @@ test
 
 ## Installation
 
-Required steps to install for your project are test
+Required steps to install for your project are "inquirer"
 
 ## Usage
 
-To run this app, go to the terminal type 
+To run this app, go to the terminal and type "node index.js"
 
 ## License
 
@@ -31,10 +31,10 @@ Who helped you contribute to this application? me
 
 ## Tests
 
-test
+In order to test this application you need to go to Terminal
 
 ## Questions
 
-If you have any questoins contact me at https://github.com/ceebcheng
+If you have any questions contact me at https://github.com/Ceebcheng
 and jonathan2075@gmail.com
 

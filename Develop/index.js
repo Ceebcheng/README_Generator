@@ -37,7 +37,7 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "",
+        message: "Where do you test this application?",
         name: "test"
     },
     {
@@ -88,11 +88,11 @@ ${input.description}
 
 ## Installation
 
-Required steps to install for your project are ${input.requiredsteps}
+Required steps to install for your project are "${input.requiredsteps}"
 
 ## Usage
 
-To run this app, go to the terminal and type ${input.usage}
+To run this app, go to the terminal and type "${input.usage}"
 
 ## License
 
@@ -104,11 +104,11 @@ Who helped you contribute to this application? ${input.contributing}
 
 ## Tests
 
-${input.test}
+In order to test this application you need to go to ${input.test}
 
 ## Questions
 
-If you have any questoins contact me at https://github.com/${input.question1}
+If you have any questions contact me at https://github.com/${input.question1}
 and ${input.question2}
 
 `
