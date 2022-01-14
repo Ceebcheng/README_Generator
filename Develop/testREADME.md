@@ -1,8 +1,8 @@
-# Readme Generator
+# fun
     
 ## Description
 
-To help the user create a simple and fun readme for their github
+to have fun
 
 ## Table of Contents
 
@@ -31,10 +31,10 @@ Who helped you contribute to this application? me
 
 ## Tests
 
-In order to test this application you need to go to Terminal
+In order to test this application you need to go to terminal
 
 ## Questions
 
-If you have any questions contact me at https://github.com/Ceebcheng
+If you have any questions contact me at https://github.com/ceebcheng
 and jonathan2075@gmail.com
 
