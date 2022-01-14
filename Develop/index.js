@@ -1,7 +1,7 @@
-// TODO: Include packages needed for this application
+
 const fs = require('fs');
 const inquirer = require('inquirer');
-// TODO: Create an array of questions for user input
+
 inquirer.prompt([
 
     {
@@ -20,19 +20,44 @@ inquirer.prompt([
         name: "requiredsteps"
     },
     {
+        type: "input",
+        message: "What do i have to type in order to run this?",
+        name: "usage"
+    },
+    {
         type: "list",
         message: "What license did you get for this application?",
         name: "license",
         choices: ["Mit", "GNU AGPLv3", "Apache License 2.0", "Mozilla Public License 2.0","The Unlicense"]
     },
+    {
+        type: "input",
+        message: "Who helped you contributing to this project?",
+        name: "contributing"
+    },
+    {
+        type: "input",
+        message: "",
+        name: "test"
+    },
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "question1"
+    },
+    {
+        type: "input",
+        message: "What is your Email address?",
+        name: "question2"
+    },
 ])
 
-// TODO: Create a function to write README file
+
 
 .then((answers) => {
-    // console.log(answers);
+    
     var readMe = generatereadMe(answers);
-    // console.log(readMe);
+   
     fs.writeFile('testREADME.md', readMe, (err) => {
         if (err) {
             console.log(err);
@@ -44,10 +69,10 @@ inquirer.prompt([
     console.log(err);
 })
 
-// TODO: Create a function to initialize app
+
 function generatereadMe(input) {
     return `# ${input.title}
-
+    
 ## Description
 
 ${input.description}
@@ -61,32 +86,31 @@ ${input.description}
 - [Tests](#tests)
 - [Questions](#questions)
 
-#Installation
+## Installation
 
 Required steps to install for your project are ${input.requiredsteps}
 
-#Usage
+## Usage
 
-To run this app, go to the terminal type ${input.useage}
+To run this app, go to the terminal and type ${input.usage}
 
-#Licsense
+## License
 
 ${input.license}
 
-#Contributing
+## Contributing
 
+Who helped you contribute to this application? ${input.contributing}
 
+## Tests
 
-#Tests
+${input.test}
 
+## Questions
 
-
-#Questions
-
-
+If you have any questoins contact me at https://github.com/${input.question1}
+and ${input.question2}
 
 `
 }
 
-// Function call to initialize app
-// generatereadMe();
